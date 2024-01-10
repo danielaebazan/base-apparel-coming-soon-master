@@ -97,9 +97,32 @@
     background: hsl(0, 80%, 86%);
   }
 
-  .error-message {
-      color: hsl(0, 74%, 74%);
+  .input-wrapper {
+      position: relative;
+      width: max-content;
+      background: transparent;
   }
+
+  .error-message {
+      display: none;
+      color: hsl(0, 74%, 74%);
+      font-size: 0.8em;
+      margin-top: 5px;
+      position: absolute;
+      bottom: -20px;
+      left: 50px;
+  }
+
+  .error-icon {
+    display: none;
+    position: absolute;
+    left: 275px;
+  }
+
+  .error {
+      border: 1px solid red;
+  }
+
 
 @media screen and (max-width: 375px) {
 

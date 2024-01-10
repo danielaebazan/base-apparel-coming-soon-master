@@ -26,19 +26,20 @@
     
       <p>Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
-    
+
       <form class="form-container" id="emailForm">
         <div class="input-wrapper">
           <input type="email" id="email" class="oval-input" placeholder="Email Address">
-          <button type="submit" class="submit-btn">
-            <img src="./images/icon-arrow.svg" alt="Submit">
-          </button>
-          <span class="error-message" id="error-message"></span>
+          <span id="emailError" class="error-message"></span>
+          <img id="errorIcon" class="error-icon" src="./images/icon-error.svg" alt="Error">
         </div>
+        <button type="submit" class="submit-btn" id="submit">
+          <img src="./images/icon-arrow.svg" alt="Submit">
+        </button>
       </form>
 
+      <script src="./emailValidation.js"></script>
     </div>
-
     </div>
     
     <div class="picture">
