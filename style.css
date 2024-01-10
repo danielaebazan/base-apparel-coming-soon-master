@@ -123,6 +123,10 @@
       border: 1px solid red;
   }
 
+  .picture {
+    width: 100%;
+  }
+
 
 @media screen and (max-width: 375px) {
 
