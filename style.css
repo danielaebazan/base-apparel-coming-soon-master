@@ -59,15 +59,6 @@
       align-items: center;
   }
 
-  .placeholder-text {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: hsl(0, 36%, 70%);
-      pointer-events: none;
-  }
-
   .input-wrapper {
       position: relative;
       display: flex;
@@ -85,6 +76,10 @@
       outline: none;
   }
 
+  .oval-input::placeholder {
+      color: hsl(0, 36%, 70%, 0.3);
+  }
+
   .submit-btn {
       position: absolute;
       right: 0;
@@ -93,8 +88,17 @@
       background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
       border: none;
       border-radius: 50px;
-      padding: 15px 35px;
+      padding: 15px 45px;
       cursor: pointer;
+      box-shadow: 0px 4px 10px hsl(0, 80%, 86%);
+  }
+
+  .submit-btn:hover {
+    background: hsl(0, 80%, 86%);
+  }
+
+  .error-message {
+      color: hsl(0, 74%, 74%);
   }
 
 @media screen and (max-width: 375px) {
@@ -103,7 +107,7 @@
     html {
         height: 100%;
         width: 100%;
-        margin: 0 auto;
+        margin: 0;
         display: flex;
         flex-direction: column;
     }
@@ -111,34 +115,54 @@
     .content {
         width: 100%;
         max-width: 375px;
-        margin: 0 auto;
+        margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-        .info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            margin-left: 150px;
-        }
-    
-        .info-1 {
-            order: -1;
-        }
-    
-        .info-2 {
-            order: 1;
-        }
-    
-        .picture {
-            margin-top: 20px;
-            max-width: 100%;
-            order: 0;
-            align-self: center;
-        }
+    .info {
+        width: 100%;
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        position: relative;
+    }
+
+    .info-1 {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 30px;
+
+    }
+
+    .info-2 {
+        width: 85%;
+        margin-left: 20px;
+        margin-top: 225px;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .picture {
+        width: 100%;
+        align-self: center;
+        margin-top: 10px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }
     

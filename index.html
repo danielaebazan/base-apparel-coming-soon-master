@@ -27,13 +27,13 @@
       <p>Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
     
-      <form class="form-container">
+      <form class="form-container" id="emailForm">
         <div class="input-wrapper">
-          <input type="email" id="email" class="oval-input" placeholder=" ">
-          <label for="email" class="placeholder-text">Email Address</label>
+          <input type="email" id="email" class="oval-input" placeholder="Email Address">
           <button type="submit" class="submit-btn">
             <img src="./images/icon-arrow.svg" alt="Submit">
           </button>
+          <span class="error-message" id="error-message"></span>
         </div>
       </form>
 
@@ -42,8 +42,16 @@
     </div>
     
     <div class="picture">
-      <img src="./images/hero-desktop.jpg" alt="">
+      <picture>
+        <source
+        media="(min-width: 1440px)"
+        srcset="./images/hero-desktop.jpg">
+        <source media="(min-width: 375px)"
+        srcset="./images/hero-mobile.jpg">
+        <img src="./images/hero-desktop.jpg" alt="">
+      </picture>  
     </div>
+  
   </div>
 
   <footer>
